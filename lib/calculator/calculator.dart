@@ -9,7 +9,7 @@ void main(){
   int num2 = int.parse(stdin.readLineSync()!);
   if(operators == "+"){
     ans = num1+num2;
-    print('$num1 $operators $num2= $ans');
+    print('$num1 $operators $num2 = $ans');
   } else if(operators == "-"){
     ans = num1-num2;
     print('$num1 $operators $num2 = $ans');
@@ -23,5 +23,10 @@ void main(){
     print('Error');
   }
   //
+  operators == '+' ? print('$num1 $operators $num2 = ${num1+num2}')
+      :  operators == '-' ? print('$num1 $operators $num2 = ${num1-num2}')
+      :  operators == '*' ? print('$num1 $operators $num2 = ${num1*num2}')
+      :  operators == '/' ? print('$num1 $operators $num2 = ${num1/num2}')
+      : print('Invalid operator');
 
 }
